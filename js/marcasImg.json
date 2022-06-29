@@ -1,0 +1,29 @@
+[
+   
+    {
+        "marca":"Fiat",
+       "img":"img/fiat.gif"
+    },
+    {
+        "marca": "Ford",
+        "img":"img/ford.gif" 
+    },
+    {
+        "marca":"Chevrolet",
+        "img":"img/chevrolet.gif" 
+    },
+    {
+        "marca":"Toyota",
+        "img":"img/toyota.gif" 
+    },
+    {
+        "marca":"BMW",
+        "img":"img/bmw.gif" 
+    },
+    {
+        "marca":"Mercedes Benz",
+        "img":"img/mercedesBenz.gif" 
+    }
+  
+ ]
+ 

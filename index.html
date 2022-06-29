@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LEP Seguros es una empresa dedicada al negocio de seguros, especialistas en análisis de riesgos">
+    <meta name="keywords"  content="seguros, automotor, motocicleta, bicibleta, seguros generales, terceros completo, terceros completo full, robo, hurto ">
+    <title>Cotizacion</title>  
+    <link rel="icon" href="img/logo.jpg" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body >
+ 
+  <main class="cotizacion" id="page" >
+    <form id="form" class="formulario" action="javascript:void(0)" method="post" name="coti" style="display: none;">
+                <h1 class="formulario__h1">Ingresá los datos de tu vehículo</h1>
+                                    
+                <label class="formulario__titulo" for="nombreApellido"></label>
+                <input class="formulario__titulo--campo" type="text" placeholder="Nombre y Apellido" id="nombreApellido">
+
+                <select class="formulario__titulo--campo" name="marca" id="marca" required>
+                  <option value=" ">Seleccione marca</option>
+                  <option value="Fiat">Fiat</option>
+                  <option value="Chevrolet" >Chevrolet</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Ford">Ford</option>
+                  <option value="BMW" >BMW</option>
+                  <option value="Mercedes Benz">Mercedes Benz</option> 
+                </select>
+               
+
+                  <select class="formulario__titulo--campo"  name="gama" id="gama" required>
+                    <option value=" ">Seleccione gama</option>
+                    <option value="alta">Gama alta</option>
+                    <option value="media">Gama media</option>
+                    <option value="baja">Gama baja</option>
+                  </select>
+                  <label class="formulario__titul" for="sumaAsegurada"></label>
+                <input class="formulario__titulo--campo" type="number" placeholder="Suma Asegurada" id="sumaAsegurada" name="sumaAsegurada" 
+                min="0"
+                max="500000">
+                <div id="errorSumaAsegurada"></div>
+                <div class="formulario__radio" >
+                    <p class="formulario__radio--gnc" >
+                    ¿Posee GNC?
+
+                    <input type="radio" name="gnc" id="gnc"  value="si" required>Si
+                    <input type="radio" name="gnc" id="gnc" value="no" required>No 
+                    </p>
+
+                    <p class="formulario__radio--0km" id="errorOkm">
+                        ¿Es 0KM?
+                        <input type="radio" name="Okm" id="Okm" value="si" required>Si
+                        <input type="radio" name="Okm" id="Okm" value="no" required>No
+                    </p>
+                    <p class="formulario__radio--0km" >
+                      Seleccione un Plan
+                      <input type="radio" name="plan" id="plan" value="premium" required>Premium
+                      <input type="radio" name="plan" id="plan" value="basico" required>Basico
+                  </p>
+                </div>
+                <label class="formulario__titul" for="año"></label>
+                <input class="formulario__titulo--campo" type="number" placeholder="año" id="año" 
+                min="2000"
+                max="2022">
+
+                <label class="formulario__titul" for="codigoPostal"></label>
+                <input class="formulario__titulo--campo" type="text" placeholder="Codigo Postal" id="codigoPostal">
+
+                <label class="formulario__titul" for="email"></label>
+                
+                <input class="formulario__titulo--campo" type="email" placeholder="E-Mail" id="email">
+                <div id="btnForm">
+                  <div class="botonesInicio">
+                <input class="formulario__boton" type="submit" class="btn btn-secondary" id="btnAdd" value="Solicitar Cotizacion">
+                <input class="formulario__boton"  type="submit" class="btn btn-secondary" id="btnOtra" value="Ver Cotizaciones ">
+                
+                <a href="" class="formulario__boton" class="btn btn-secondary" id="btnLimpiar" style="display: flex ;">Limpiar listado</a>
+              </div>
+              </div>
+
+
+
+                
+    </form>
+    <section id="animacionInicio" style="display: none;" >
+      <h2 >Usted esta siendo reedirigido a nuestro cotizador</h2>
+      <img src="img/loading1.gif" alt="">
+    </section>
+  
+    <section id="secAnimacion" style="display: none;" >
+      <img id="animacion" src="img/loading.gif" alt="">
+    </section>
+
+
+    
+
+
+    
+    <div id="listadoCotizaciones">
+    <h2 class="tituloListado">Listado de cotizaciones solicitadas</h2>
+    <h2 id="beneficio"> Superando los $20.000,00.- en sus cotizaciones 10% de descuento</h2>
+
+      <div id="contenedorCoti">
+    <div id="textoCotizacion">
+    
+    
+    </div>
+    <div ><h2 id="totalCotizado"></h2></div>
+    <div ><h2 id="descuento"></h2></div>
+  </div>
+  <div id="botones" >
+    
+  <input class="formulario__boton" type="submit" class="btn btn-secondary" id="btnVolver" value="Seguir cotizando">
+  <a href="" class="formulario__boton" class="btn btn-secondary" id="btnLimpiar2" style="display: flex ;">Limpiar listado</a>
+</div>
+  </div>
+  <div id="detalleCoti">
+    <div id="detalleCoti2"></div>
+    <div>  
+        <input class="formulario__boton" type="submit" class="btn btn-secondary" id="btnVolver2" class="formulario__boton" value="Volver al listado">
+
+    </div>
+
+  </div>
+
+  <div id="textoGuardado"> </div>
+
+  <div class="container-btn-mode" id="btn">
+    <div id="id-sun" class="btn-mode sun active">
+       <i class="fas fa-sun"></i>
+    </div>
+    <div id="id-moon" class="btn-mode moon">
+       <i class="fas fa-moon"></i>
+    </div>
+ </div>
+  </main>
+    <footer class="footer">
+    
+      
+      <div class="footer__copyright">Copyright&copy; 2022 - Página creada por Lucas Penel - Todos los derechos reservados</div>
+  </footer>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="js/data.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

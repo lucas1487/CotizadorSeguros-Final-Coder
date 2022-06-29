@@ -1,0 +1,464 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+
+/*FOOTER*/
+.footer{
+    text-align: center;
+    margin-top: 1rem;
+    
+    
+}
+
+
+.footer__copyright{
+    color: grey;
+    
+    font-size: 1rem;
+    padding: 1rem;
+    
+}
+
+.formulario{
+	width:50%;
+	padding-top:2rem;
+	border-radius:1rem;
+	margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
+    text-align: center;
+}
+.formulario__h1{
+    color:rgb(2, 29, 83);
+    font-family: "Lucida Console", "Courier New", monospace;
+    animation: fadeInTopLeft;
+    animation-duration: 2s;
+    
+
+}
+.formulario__titulo{
+	width:50%;
+	 
+    
+    
+}
+
+.formulario__titulo--campo 
+
+
+{
+	width:75%;
+    height: 3rem;
+	padding:1px;
+	border:2px solid rgba(0, 0, 0, 0.034);
+	border-radius:3px;
+	background-color:#f6f6f6;
+    margin: 0.3rem;
+    font-size: 1.5rem;
+    
+    
+    
+    
+}
+#btnForm{
+	width:100%;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: row;
+    
+
+}
+
+
+.formulario__boton{
+	padding:8px 16px;
+	margin:5px;
+	border:1px solid #000;
+	border-radius:5px;
+	justify-content: center;
+    flex-direction: column;
+	color:#fff;
+	background-color:rgb(2, 29, 83);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    
+} 
+#botones{
+    text-align: center;
+    display: flex;
+}
+
+
+
+.formulario__boton:hover{
+	color: gray;
+    background-color:rgb(2, 29, 83, 0.9);
+    border:0.3px solid #fff;
+}
+#btnLimpiar{
+    text-decoration:none ;
+}
+
+
+
+.formulario__texto{
+	width:95%;
+	height:10rem;
+	border:2px solid black;
+	border-radius:3px;
+	background-color:#f6f6f6;
+    			
+	
+	resize:none;
+	
+    justify-content: center;
+}
+
+   
+    
+
+
+.formulario__radio--gnc,.formulario__radio--0km{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgb(2, 29, 83);
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+.formulario__radio{
+    font-size: 1.5rem;
+    
+    
+    
+}
+.formulario__select{
+    border:2px solid black;
+    border-radius:3px;  
+    margin: 1rem;
+    justify-content: center;
+}
+.cotizacion  {
+    width: 100%;
+    min-height: 90vh;
+    background: url("../img/fondo.svg") center fixed ;
+    background-size: cover;
+    margin: auto;
+    background-color: lightsteelblue;
+}
+
+#textoCoti{
+    font-size: 2rem;
+    padding: 1rem;
+   
+}
+#listadoCotizaciones{
+
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cotizacionTexto{
+    width: 100%;
+    background-color:rgba(165, 42, 42, 0.548);
+    margin: 1rem,0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+#texto{
+    display: flex;
+    justify-content: left;
+    
+}
+#contenedorBotones{
+    display: flex;
+    justify-content:right;
+}
+
+.cotizacionTexto2{
+    font-size: 2rem;
+}
+
+
+#totalCotizado{
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+}
+#descuento{
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+
+}
+.tituloListado, #beneficio{
+    font-weight: bold;
+
+}
+
+
+#btnDescrip{
+    width:20%;
+	padding:8px 8px;
+	margin:5px;
+	border:1px solid #000;
+	border-radius:5px;
+	justify-content: center;
+	color:#fff;
+	background-color:rgb(2, 29, 83);
+    text-decoration: none;
+
+}
+#btnBorrar{
+    width:20%;
+	padding:8px 8px;
+	margin:5px;
+	border:1px solid #000;
+	border-radius:5px;
+	justify-content: center;
+	color:#fff;
+	background-color:rgba(87, 2, 2, 0.623);
+    text-decoration: none;
+
+}
+#btnBorrar:hover{
+    
+	background-color:rgba(255, 0, 0, 0.623);
+    
+
+}
+#detalleCoti{
+    display: none;
+}
+
+#detalleCoti{
+    width: 100%;
+    align-items: center;  
+  flex-direction: column;
+}
+#detalleCoti2{
+    margin: 2rem;
+    background-color:rgba(165, 42, 42, 0.548);
+    font-size: 2rem;
+    padding: 2rem;
+}
+.cotizacionTexto2{
+    text-align: center;
+    
+}
+
+#secAnimacion{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#animacionInicio{
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#animacionInicio h2{
+    font-family: "Lucida Console", "Courier New", monospace;
+
+    font-size: 2.5rem;
+
+}
+.botonesInicio
+{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.container-btn-mode{
+    position: absolute;
+    top:20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 2;
+    font-size:0;
+  }
+  .btn-mode{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border:2px solid black;
+    transition: background-color .5s;
+  }
+  .btn-mode i {
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .btn-mode.sun{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid transparent;
+  }
+  .btn-mode.moon{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+  }
+  .active{
+    background-color:black;
+    color:#ffcd5c !important;
+  }
+  .dark-mode{
+    background-color: #000000d8;
+    transition:background-color .5s;
+  }
+  .dark-mode .card{
+    background-color: #1A1C1E;
+  }
+  .dark-mode h1, .dark-mode h2,.dark-mode p,.dark-mode a,.dark-mode .formulario__boton, .dark-mode .btn-contact{
+    color:rgb(250, 238, 170);
+  }
+ 
+
+  .dark-mode .formulario__boton{
+    color:rgb(250, 238, 170);
+    background: brown;
+  }
+  .dark-mode .cotizacionTexto2{
+    color: aqua;
+    background: brown;
+  }
+  .dark-mode .formulario__boton:hover  {
+	color: gray;
+    background: rgba(165, 42, 42, 0.548);
+    border:0.3px solid #fff;
+}
+.dark-mode #btnDescrip{
+    color:rgb(250, 238, 170);
+    background: brown;
+
+}
+.dark-mode #btnDescrip:hover{
+    color: gray;
+    background: rgba(165, 42, 42, 0.8);
+    border:0.3px solid #fff;
+
+}
+.dark-mode .cotizacionTexto,.dark-mode #detalleCoti2{
+    color: #f6f6f6;
+
+    background-color: darkgray;
+
+}
+  
+  .dark-mode .btn-mode{
+    background-color:#1A1C1E;
+    border:1px solid white;
+    color:white;
+  }
+  .swal2-styled.swal2-confirm.swalBtnColor {
+    padding:8px 16px;
+	margin:5px;
+	border:1px solid #000;
+	border-radius:5px;
+	justify-content: center;
+    flex-direction: column;
+	color:#fff;
+	background-color:rgb(2, 29, 83);
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  .swal2-styled.swal2-confirm.swalBtnColor:hover{
+	color: gray;
+    background-color:rgb(2, 29, 83, 0.9);
+    border:0.3px solid #fff;
+}
+@media (max-width: 700px)
+  {
+    .botonesInicio
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.cotizacionTexto{
+    display: flex;
+    justify-content: space-between;
+}
+.cotizacionTexto{
+    
+    font-size: 1.3rem;
+
+}
+.container-btn-mode{
+   
+    top:2px;
+    right: 10px;
+   
+  }
+  .btn-mode{
+    width: 35px;
+    height: 30px;
+  }
+  .btn-mode i {
+    font-size: 13px;
+  }
+  #beneficio{
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 400px)
+  {
+    
+        .botonesInicio
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cotizacionTexto{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cotizacionTexto{
+        
+        font-size: 0.8rem;
+    
+    }
+    .container-btn-mode{
+       
+        top:2px;
+        right: 10px;
+       
+      }
+      .btn-mode{
+        width: 35px;
+        height: 30px;
+      }
+      .btn-mode i {
+        font-size: 13px;
+      }
+      #beneficio{
+        font-size: 1rem;
+      }
+}
